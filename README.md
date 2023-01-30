@@ -2,7 +2,7 @@
 
 App que simula o gerenciamento de uma loja de construção, com opções para cadastrar vendedor e  produtos.
 
--abrir projeto no Pycharm
+Abrir projeto no Pycharm
 -escrever o comando no terminal - python manage.py runserver 
 -logar com: /auth/login/
 
