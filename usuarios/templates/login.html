@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+
+{% block 'body' %}
+<div class="container">
+        {% if messages  %}
+        <br>
+        {% for message in messages %}
+            <div class="alert {{  message.tags }}">{{message}}</div>
+        {% endfor %}
+    {% endif %}
+    <form action="{% url 'login' %}" method="POST">{% csrf_token %}
+        <br>
+        <label>E-mail</label>
+        <input type="'email" placeholder="digite seu email" name="email" class="form-control">
+        <br>
+        <label>Senha</label>
+        <input type="password" placeholder="digite sua senha" name="senha" class="form-control">
+        <br>
+        <input type="submit" class="btn btn-success">
+
+</div>
+    </form>
+
+
+{% endblock %}
