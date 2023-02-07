@@ -17,7 +17,7 @@ SECRET_KEY = 'django-insecure-^j1c+@$#9g*^nm8^17lsl__cn&zz^a4r(32)gb0$hm9@*1lpo%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -72,11 +72,22 @@ WSGI_APPLICATION = 'construct_youtube.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
+# Render Postgres database
+
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+
+    'default': dj_database_url.parse('postgres://constructapp_e6tu_user:BDYGZjB6F20Rf2VA2BD3jpv6lMEWEqMo@dpg-cfh9v49a6gdvgkn9f4t0-a.ohio-postgres.render.com/constructapp_e6tu')
+
 }
 
 
