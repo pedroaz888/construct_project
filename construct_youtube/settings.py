@@ -7,6 +7,13 @@ from django.contrib.messages import constants
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+import environ
+
+env = environ.Env()
+
+environ.Env.read_env()
+
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -72,6 +79,8 @@ WSGI_APPLICATION = 'construct_youtube.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -86,7 +95,7 @@ import dj_database_url
 
 DATABASES = {
 
-    'default': dj_database_url.parse('postgres://constructapp_e6tu_user:BDYGZjB6F20Rf2VA2BD3jpv6lMEWEqMo@dpg-cfh9v49a6gdvgkn9f4t0-a.ohio-postgres.render.com/constructapp_e6tu')
+    'default': dj_database_url.parse(env('DATABASE_URL'))
 
 }
 
