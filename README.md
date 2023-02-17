@@ -13,6 +13,4 @@ https://constructproject-production.up.railway.app/auth/login
 - usuário: joe@email.com
 - senha: 123
 
-- usuário: ken@email.com
-- senha: 123
 
