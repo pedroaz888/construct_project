@@ -2,7 +2,7 @@
 
 App que simula o gerenciamento de uma loja de construção, com opções para cadastrar vendedor e  produtos.
 
-https://django-construct-app.onrender.com/auth/login/
+https://constructproject-production.up.railway.app/auth/login
 
 
 -SENHA - para cadastrar vendedor e produtos- 
