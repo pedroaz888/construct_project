@@ -7,11 +7,11 @@ from django.contrib.messages import constants
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-import environ
-
-env = environ.Env()
-
-environ.Env.read_env()
+# import environ
+#
+# env = environ.Env()
+#
+# environ.Env.read_env()
 
 
 
@@ -22,7 +22,7 @@ environ.Env.read_env()
 SECRET_KEY = 'django-insecure-^j1c+@$#9g*^nm8^17lsl__cn&zz^a4r(32)gb0$hm9@*1lpo%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -94,13 +94,13 @@ WSGI_APPLICATION = 'construct_youtube.wsgi.application'
 
 # Render Postgres database
 
-import dj_database_url
-
-DATABASES = {
-
-    'default': dj_database_url.parse(env('DATABASE_URL'))
-
-}
+# import dj_database_url
+#
+# DATABASES = {
+#
+#     'default': dj_database_url.parse(env('DATABASE_URL'))
+#
+# }
 
 
 # Password validation
@@ -170,4 +170,4 @@ MESSAGE_TAGS = {
 
 }
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
