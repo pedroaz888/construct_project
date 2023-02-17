@@ -84,6 +84,19 @@ WSGI_APPLICATION = 'construct_youtube.wsgi.application'
 
 
 
+
+
+DATABASES = {
+    'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': 'railway',
+            'USER': 'root',
+            'PASSWORD': 'TgphF1FLQbT3jGbrtr8c',
+            'HOST':'containers-us-west-152.railway.app',
+            'PORT':'5914',
+    }
+}
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
