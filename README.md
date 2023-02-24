@@ -10,7 +10,7 @@ https://constructproject-production-d9a6.up.railway.app/auth/login
 - senha: 123
 
 -SENHA - para cadastrar produtos - 
-- usuário: tulio@email.com
+- usuário: joe@email.com
 - senha: 123
 
 
